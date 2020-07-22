@@ -25,9 +25,9 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button class="btn btn-default"><i id="subtract_value" class="fas fa-minus"></i></button>
+                           <input id="add_area" type="text" class="form-control text-center" value="1">
+                           <button class="btn btn-default"><i id="add_value" class="fas fa-plus"></i></button>
                         </div>
                         <h5>$1219</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
@@ -77,6 +77,16 @@
          </div>
       </div>
    </section>
+   <script>
+      const subtractValue = document.getElementById("subtract_value");
+      const addValue = document.getElementById("add_value");
+      addValue.addEventListener("click", function(){
+         add_area.value = parseInt(add_area.value) +1;
+      })
+      subtractValue.addEventListener("click", function(){
+         add_area.value = parseInt(add_area.value) -1;
+      })
+   </script>
 </body>
 
 </html>
